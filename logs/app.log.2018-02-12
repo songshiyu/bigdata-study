@@ -1,0 +1,594 @@
+[WARN  2018-02-12 14:09:10][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 14:09:10][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:48)
+[WARN  2018-02-12 14:09:15][main] JobResourceUploader:64 Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[WARN  2018-02-12 14:09:15][main] JobResourceUploader:171 No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+[INFO  2018-02-12 14:09:15][main] FileInputFormat:281 Total input paths to process : 1
+[INFO  2018-02-12 14:09:15][main] JobSubmitter:199 number of splits:1
+[INFO  2018-02-12 14:09:15][main] JobSubmitter:288 Submitting tokens for job: job_1518405253294_0006
+[INFO  2018-02-12 14:09:16][main] YARNRunner:371 Job jar is not present. Not adding any jar to the list of resources.
+[INFO  2018-02-12 14:09:16][main] YarnClientImpl:251 Submitted application application_1518405253294_0006
+[INFO  2018-02-12 14:09:16][main] Job:1301 The url to track the job: http://songshiyu002:8088/proxy/application_1518405253294_0006/
+[INFO  2018-02-12 14:09:16][main] Job:1346 Running job: job_1518405253294_0006
+[INFO  2018-02-12 14:09:19][main] Job:1367 Job job_1518405253294_0006 running in uber mode : false
+[INFO  2018-02-12 14:09:19][main] Job:1374  map 0% reduce 0%
+[INFO  2018-02-12 14:09:19][main] Job:1387 Job job_1518405253294_0006 failed with state FAILED due to: Application application_1518405253294_0006 failed 2 times due to AM Container for appattempt_1518405253294_0006_000002 exited with  exitCode: 1
+For more detailed output, check application tracking page:http://songshiyu002:8088/proxy/application_1518405253294_0006/Then, click on links to logs of each attempt.
+Diagnostics: Exception from container-launch.
+Container id: container_1518405253294_0006_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:212)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+Failing this attempt. Failing the application.
+[INFO  2018-02-12 14:09:19][main] Job:1392 Counters: 0
+[WARN  2018-02-12 14:12:57][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 14:12:57][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:48)
+[WARN  2018-02-12 14:13:07][main] JobResourceUploader:64 Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[WARN  2018-02-12 14:13:07][main] JobResourceUploader:171 No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+[INFO  2018-02-12 14:13:07][main] FileInputFormat:281 Total input paths to process : 1
+[INFO  2018-02-12 14:13:09][main] JobSubmitter:199 number of splits:1
+[INFO  2018-02-12 14:13:09][main] JobSubmitter:288 Submitting tokens for job: job_1518405253294_0007
+[INFO  2018-02-12 14:13:09][main] YARNRunner:371 Job jar is not present. Not adding any jar to the list of resources.
+[INFO  2018-02-12 14:13:09][main] YarnClientImpl:251 Submitted application application_1518405253294_0007
+[INFO  2018-02-12 14:13:09][main] Job:1301 The url to track the job: http://songshiyu002:8088/proxy/application_1518405253294_0007/
+[INFO  2018-02-12 14:13:09][main] Job:1346 Running job: job_1518405253294_0007
+[INFO  2018-02-12 14:13:12][main] Job:1367 Job job_1518405253294_0007 running in uber mode : false
+[INFO  2018-02-12 14:13:12][main] Job:1374  map 0% reduce 0%
+[INFO  2018-02-12 14:13:12][main] Job:1387 Job job_1518405253294_0007 failed with state FAILED due to: Application application_1518405253294_0007 failed 2 times due to AM Container for appattempt_1518405253294_0007_000002 exited with  exitCode: 1
+For more detailed output, check application tracking page:http://songshiyu002:8088/proxy/application_1518405253294_0007/Then, click on links to logs of each attempt.
+Diagnostics: Exception from container-launch.
+Container id: container_1518405253294_0007_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:212)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+Failing this attempt. Failing the application.
+[INFO  2018-02-12 14:13:13][main] Job:1392 Counters: 0
+[WARN  2018-02-12 14:15:09][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 14:15:09][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:48)
+[WARN  2018-02-12 14:15:14][main] JobResourceUploader:64 Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[WARN  2018-02-12 14:15:14][main] JobResourceUploader:171 No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+[INFO  2018-02-12 14:15:14][main] FileInputFormat:281 Total input paths to process : 1
+[INFO  2018-02-12 14:15:15][main] JobSubmitter:199 number of splits:1
+[INFO  2018-02-12 14:15:15][main] JobSubmitter:288 Submitting tokens for job: job_1518405253294_0008
+[INFO  2018-02-12 14:15:15][main] YARNRunner:371 Job jar is not present. Not adding any jar to the list of resources.
+[INFO  2018-02-12 14:15:15][main] YarnClientImpl:251 Submitted application application_1518405253294_0008
+[INFO  2018-02-12 14:15:15][main] Job:1301 The url to track the job: http://songshiyu002:8088/proxy/application_1518405253294_0008/
+[INFO  2018-02-12 14:15:15][main] Job:1346 Running job: job_1518405253294_0008
+[INFO  2018-02-12 14:15:18][main] Job:1367 Job job_1518405253294_0008 running in uber mode : false
+[INFO  2018-02-12 14:15:18][main] Job:1374  map 0% reduce 0%
+[INFO  2018-02-12 14:15:18][main] Job:1387 Job job_1518405253294_0008 failed with state FAILED due to: Application application_1518405253294_0008 failed 2 times due to AM Container for appattempt_1518405253294_0008_000002 exited with  exitCode: 1
+For more detailed output, check application tracking page:http://songshiyu002:8088/proxy/application_1518405253294_0008/Then, click on links to logs of each attempt.
+Diagnostics: Exception from container-launch.
+Container id: container_1518405253294_0008_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:212)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+Failing this attempt. Failing the application.
+[INFO  2018-02-12 14:15:18][main] Job:1392 Counters: 0
+[WARN  2018-02-12 14:15:39][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 14:15:39][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:48)
+[WARN  2018-02-12 14:15:44][main] JobResourceUploader:64 Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[WARN  2018-02-12 14:15:44][main] JobResourceUploader:171 No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+[INFO  2018-02-12 14:15:44][main] FileInputFormat:281 Total input paths to process : 1
+[INFO  2018-02-12 14:15:44][main] JobSubmitter:199 number of splits:1
+[INFO  2018-02-12 14:15:44][main] JobSubmitter:288 Submitting tokens for job: job_1518405253294_0009
+[INFO  2018-02-12 14:15:44][main] YARNRunner:371 Job jar is not present. Not adding any jar to the list of resources.
+[INFO  2018-02-12 14:15:44][main] YarnClientImpl:251 Submitted application application_1518405253294_0009
+[INFO  2018-02-12 14:15:45][main] Job:1301 The url to track the job: http://songshiyu002:8088/proxy/application_1518405253294_0009/
+[INFO  2018-02-12 14:15:45][main] Job:1346 Running job: job_1518405253294_0009
+[INFO  2018-02-12 14:15:48][main] Job:1367 Job job_1518405253294_0009 running in uber mode : false
+[INFO  2018-02-12 14:15:48][main] Job:1374  map 0% reduce 0%
+[INFO  2018-02-12 14:15:48][main] Job:1387 Job job_1518405253294_0009 failed with state FAILED due to: Application application_1518405253294_0009 failed 2 times due to AM Container for appattempt_1518405253294_0009_000002 exited with  exitCode: 1
+For more detailed output, check application tracking page:http://songshiyu002:8088/proxy/application_1518405253294_0009/Then, click on links to logs of each attempt.
+Diagnostics: Exception from container-launch.
+Container id: container_1518405253294_0009_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:212)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+Failing this attempt. Failing the application.
+[INFO  2018-02-12 14:15:48][main] Job:1392 Counters: 0
+[WARN  2018-02-12 14:19:51][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 14:19:51][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:48)
+[WARN  2018-02-12 14:20:01][main] JobResourceUploader:64 Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[WARN  2018-02-12 14:20:01][main] JobResourceUploader:171 No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+[INFO  2018-02-12 14:20:01][main] FileInputFormat:281 Total input paths to process : 1
+[INFO  2018-02-12 14:20:02][main] JobSubmitter:199 number of splits:1
+[INFO  2018-02-12 14:20:03][main] JobSubmitter:288 Submitting tokens for job: job_1518405253294_0010
+[INFO  2018-02-12 14:20:03][main] YARNRunner:371 Job jar is not present. Not adding any jar to the list of resources.
+[INFO  2018-02-12 14:20:03][main] YarnClientImpl:251 Submitted application application_1518405253294_0010
+[INFO  2018-02-12 14:20:03][main] Job:1301 The url to track the job: http://songshiyu002:8088/proxy/application_1518405253294_0010/
+[INFO  2018-02-12 14:20:03][main] Job:1346 Running job: job_1518405253294_0010
+[INFO  2018-02-12 14:20:06][main] Job:1367 Job job_1518405253294_0010 running in uber mode : false
+[INFO  2018-02-12 14:20:06][main] Job:1374  map 0% reduce 0%
+[INFO  2018-02-12 14:20:06][main] Job:1387 Job job_1518405253294_0010 failed with state FAILED due to: Application application_1518405253294_0010 failed 2 times due to AM Container for appattempt_1518405253294_0010_000002 exited with  exitCode: 1
+For more detailed output, check application tracking page:http://songshiyu002:8088/proxy/application_1518405253294_0010/Then, click on links to logs of each attempt.
+Diagnostics: Exception from container-launch.
+Container id: container_1518405253294_0010_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:212)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+Failing this attempt. Failing the application.
+[INFO  2018-02-12 14:20:06][main] Job:1392 Counters: 0
+[WARN  2018-02-12 14:38:03][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 14:38:03][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:48)
+[WARN  2018-02-12 14:38:12][main] JobResourceUploader:64 Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[WARN  2018-02-12 14:38:12][main] JobResourceUploader:171 No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+[INFO  2018-02-12 14:38:12][main] FileInputFormat:281 Total input paths to process : 1
+[INFO  2018-02-12 14:38:14][main] JobSubmitter:199 number of splits:1
+[INFO  2018-02-12 14:38:14][main] JobSubmitter:288 Submitting tokens for job: job_1518405253294_0011
+[INFO  2018-02-12 14:38:14][main] YARNRunner:371 Job jar is not present. Not adding any jar to the list of resources.
+[INFO  2018-02-12 14:38:15][main] YarnClientImpl:251 Submitted application application_1518405253294_0011
+[INFO  2018-02-12 14:38:15][main] Job:1301 The url to track the job: http://songshiyu002:8088/proxy/application_1518405253294_0011/
+[INFO  2018-02-12 14:38:15][main] Job:1346 Running job: job_1518405253294_0011
+[INFO  2018-02-12 14:38:18][main] Job:1367 Job job_1518405253294_0011 running in uber mode : false
+[INFO  2018-02-12 14:38:18][main] Job:1374  map 0% reduce 0%
+[INFO  2018-02-12 14:38:18][main] Job:1387 Job job_1518405253294_0011 failed with state FAILED due to: Application application_1518405253294_0011 failed 2 times due to AM Container for appattempt_1518405253294_0011_000002 exited with  exitCode: 1
+For more detailed output, check application tracking page:http://songshiyu002:8088/proxy/application_1518405253294_0011/Then, click on links to logs of each attempt.
+Diagnostics: Exception from container-launch.
+Container id: container_1518405253294_0011_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:212)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+Failing this attempt. Failing the application.
+[INFO  2018-02-12 14:38:18][main] Job:1392 Counters: 0
+[WARN  2018-02-12 14:40:23][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 14:40:23][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:48)
+[INFO  2018-02-12 14:40:27][main] Configuration:1129 session.id is deprecated. Instead, use dfs.metrics.session-id
+[INFO  2018-02-12 14:40:27][main] JvmMetrics:76 Initializing JVM Metrics with processName=JobTracker, sessionId=
+[WARN  2018-02-12 14:40:58][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 14:40:58][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:48)
+[INFO  2018-02-12 14:41:02][main] Configuration:1129 session.id is deprecated. Instead, use dfs.metrics.session-id
+[INFO  2018-02-12 14:41:02][main] JvmMetrics:76 Initializing JVM Metrics with processName=JobTracker, sessionId=
+[WARN  2018-02-12 14:55:04][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 14:55:04][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:47)
+[INFO  2018-02-12 14:55:11][main] Configuration:1129 session.id is deprecated. Instead, use dfs.metrics.session-id
+[INFO  2018-02-12 14:55:11][main] JvmMetrics:76 Initializing JVM Metrics with processName=JobTracker, sessionId=
+[WARN  2018-02-12 15:25:06][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 15:25:06][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:47)
+[WARN  2018-02-12 15:25:15][main] JobResourceUploader:64 Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[WARN  2018-02-12 15:25:15][main] JobResourceUploader:171 No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+[INFO  2018-02-12 15:25:15][main] FileInputFormat:281 Total input paths to process : 1
+[INFO  2018-02-12 15:25:16][main] JobSubmitter:199 number of splits:1
+[INFO  2018-02-12 15:25:16][main] JobSubmitter:288 Submitting tokens for job: job_1518405253294_0012
+[INFO  2018-02-12 15:25:17][main] YARNRunner:371 Job jar is not present. Not adding any jar to the list of resources.
+[INFO  2018-02-12 15:25:17][main] YarnClientImpl:251 Submitted application application_1518405253294_0012
+[INFO  2018-02-12 15:25:17][main] Job:1301 The url to track the job: http://songshiyu002:8088/proxy/application_1518405253294_0012/
+[INFO  2018-02-12 15:25:17][main] Job:1346 Running job: job_1518405253294_0012
+[INFO  2018-02-12 15:25:20][main] Job:1367 Job job_1518405253294_0012 running in uber mode : false
+[INFO  2018-02-12 15:25:20][main] Job:1374  map 0% reduce 0%
+[INFO  2018-02-12 15:25:20][main] Job:1387 Job job_1518405253294_0012 failed with state FAILED due to: Application application_1518405253294_0012 failed 2 times due to AM Container for appattempt_1518405253294_0012_000002 exited with  exitCode: 1
+For more detailed output, check application tracking page:http://songshiyu002:8088/proxy/application_1518405253294_0012/Then, click on links to logs of each attempt.
+Diagnostics: Exception from container-launch.
+Container id: container_1518405253294_0012_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:212)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+Failing this attempt. Failing the application.
+[INFO  2018-02-12 15:25:20][main] Job:1392 Counters: 0
+[WARN  2018-02-12 16:01:13][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 16:01:13][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:47)
+[WARN  2018-02-12 16:01:24][main] JobResourceUploader:64 Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[WARN  2018-02-12 16:01:24][main] JobResourceUploader:171 No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+[INFO  2018-02-12 16:01:24][main] FileInputFormat:281 Total input paths to process : 1
+[INFO  2018-02-12 16:01:25][main] JobSubmitter:199 number of splits:1
+[INFO  2018-02-12 16:01:25][main] JobSubmitter:288 Submitting tokens for job: job_1518405253294_0013
+[INFO  2018-02-12 16:01:26][main] YARNRunner:371 Job jar is not present. Not adding any jar to the list of resources.
+[INFO  2018-02-12 16:01:26][main] YarnClientImpl:251 Submitted application application_1518405253294_0013
+[INFO  2018-02-12 16:01:26][main] Job:1301 The url to track the job: http://songshiyu002:8088/proxy/application_1518405253294_0013/
+[INFO  2018-02-12 16:01:26][main] Job:1346 Running job: job_1518405253294_0013
+[INFO  2018-02-12 16:01:34][main] Job:1367 Job job_1518405253294_0013 running in uber mode : false
+[INFO  2018-02-12 16:01:34][main] Job:1374  map 0% reduce 0%
+[INFO  2018-02-12 16:01:34][main] Job:1387 Job job_1518405253294_0013 failed with state FAILED due to: Application application_1518405253294_0013 failed 2 times due to AM Container for appattempt_1518405253294_0013_000002 exited with  exitCode: 1
+For more detailed output, check application tracking page:http://songshiyu002:8088/proxy/application_1518405253294_0013/Then, click on links to logs of each attempt.
+Diagnostics: Exception from container-launch.
+Container id: container_1518405253294_0013_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:212)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+Failing this attempt. Failing the application.
+[INFO  2018-02-12 16:01:34][main] Job:1392 Counters: 0
+[WARN  2018-02-12 16:28:04][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 16:28:05][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:47)
+[WARN  2018-02-12 16:29:05][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-02-12 16:29:05][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:188)
+	at org.apache.hadoop.mapreduce.Job.getInstance(Job.java:207)
+	at com.bigdata.hadoop.WorldCountJob.main(WorldCountJob.java:47)
+[WARN  2018-02-12 16:29:10][main] JobResourceUploader:64 Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[WARN  2018-02-12 16:29:10][main] JobResourceUploader:171 No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+[INFO  2018-02-12 16:29:11][main] FileInputFormat:281 Total input paths to process : 1
+[INFO  2018-02-12 16:29:12][main] JobSubmitter:199 number of splits:1
+[INFO  2018-02-12 16:29:12][main] JobSubmitter:288 Submitting tokens for job: job_1518423575679_0003
+[INFO  2018-02-12 16:29:13][main] YARNRunner:371 Job jar is not present. Not adding any jar to the list of resources.
+[INFO  2018-02-12 16:29:13][main] YarnClientImpl:251 Submitted application application_1518423575679_0003
+[INFO  2018-02-12 16:29:13][main] Job:1301 The url to track the job: http://songshiyu002:8088/proxy/application_1518423575679_0003/
+[INFO  2018-02-12 16:29:13][main] Job:1346 Running job: job_1518423575679_0003
+[INFO  2018-02-12 16:29:16][main] Job:1367 Job job_1518423575679_0003 running in uber mode : false
+[INFO  2018-02-12 16:29:16][main] Job:1374  map 0% reduce 0%
+[INFO  2018-02-12 16:29:16][main] Job:1387 Job job_1518423575679_0003 failed with state FAILED due to: Application application_1518423575679_0003 failed 2 times due to AM Container for appattempt_1518423575679_0003_000002 exited with  exitCode: 1
+For more detailed output, check application tracking page:http://songshiyu002:8088/proxy/application_1518423575679_0003/Then, click on links to logs of each attempt.
+Diagnostics: Exception from container-launch.
+Container id: container_1518423575679_0003_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:212)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+Failing this attempt. Failing the application.
+[INFO  2018-02-12 16:29:16][main] Job:1392 Counters: 0

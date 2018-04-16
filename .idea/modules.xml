@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bigdata-study.iml" filepath="$PROJECT_DIR$/bigdata-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/elasticsearch-study/elasticsearch-study.iml" filepath="$PROJECT_DIR$/elasticsearch-study/elasticsearch-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/strom-study/strom-study.iml" filepath="$PROJECT_DIR$/strom-study/strom-study.iml" />
+    </modules>
+  </component>
+</project>

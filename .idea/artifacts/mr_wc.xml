@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="mr-wc">
+    <output-path>$PROJECT_DIR$/out/artifacts/mr_wc</output-path>
+    <root id="archive" name="mr-wc.jar">
+      <element id="module-output" name="bigdata-study" />
+    </root>
+  </artifact>
+</component>

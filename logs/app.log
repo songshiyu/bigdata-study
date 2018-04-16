@@ -1,0 +1,169 @@
+[INFO  2018-03-13 08:50:04][main] Logging$class:58 Running Spark version 1.6.2
+[WARN  2018-03-13 08:50:07][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-03-13 08:50:08][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2198)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at com.bigdata.TransFormation.TransFomationOps$.main(TransFomationOps.scala:16)
+	at com.bigdata.TransFormation.TransFomationOps.main(TransFomationOps.scala)
+[INFO  2018-03-13 08:50:09][main] Logging$class:58 Changing view acls to: GMW
+[INFO  2018-03-13 08:50:09][main] Logging$class:58 Changing modify acls to: GMW
+[INFO  2018-03-13 08:50:09][main] Logging$class:58 SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(GMW); users with modify permissions: Set(GMW)
+[INFO  2018-03-13 08:50:10][main] Logging$class:58 Successfully started service 'sparkDriver' on port 52378.
+[INFO  2018-03-13 08:50:11][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1:80 Slf4jLogger started
+[INFO  2018-03-13 08:50:11][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Starting remoting
+[INFO  2018-03-13 08:50:11][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.68.44:52399]
+[INFO  2018-03-13 08:50:11][main] Logging$class:58 Successfully started service 'sparkDriverActorSystem' on port 52399.
+[INFO  2018-03-13 08:50:11][main] Logging$class:58 Registering MapOutputTracker
+[INFO  2018-03-13 08:50:11][main] Logging$class:58 Registering BlockManagerMaster
+[INFO  2018-03-13 08:50:11][main] Logging$class:58 Created local directory at C:\Users\GMW\AppData\Local\Temp\blockmgr-fe4c96b6-2fc3-407d-8751-d0475ac37015
+[INFO  2018-03-13 08:50:12][main] Logging$class:58 MemoryStore started with capacity 2.4 GB
+[INFO  2018-03-13 08:50:12][main] Logging$class:58 Registering OutputCommitCoordinator
+[INFO  2018-03-13 08:50:12][main] Server:272 jetty-8.y.z-SNAPSHOT
+[INFO  2018-03-13 08:50:13][main] AbstractConnector:338 Started SelectChannelConnector@0.0.0.0:4040
+[INFO  2018-03-13 08:50:13][main] Logging$class:58 Successfully started service 'SparkUI' on port 4040.
+[INFO  2018-03-13 08:50:13][main] Logging$class:58 Started SparkUI at http://192.168.68.44:4040
+[INFO  2018-03-13 08:50:13][main] Logging$class:58 Starting executor ID driver on host localhost
+[INFO  2018-03-13 08:50:13][main] Logging$class:58 Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 52418.
+[INFO  2018-03-13 08:50:13][main] Logging$class:58 Server created on 52418
+[INFO  2018-03-13 08:50:13][main] Logging$class:58 Trying to register BlockManager
+[INFO  2018-03-13 08:50:13][dispatcher-event-loop-0] Logging$class:58 Registering block manager localhost:52418 with 2.4 GB RAM, BlockManagerId(driver, localhost, 52418)
+[INFO  2018-03-13 08:50:13][main] Logging$class:58 Registered BlockManager
+[INFO  2018-03-13 08:50:14][main] Logging$class:58 Starting job: foreach at TransFomationOps.scala:174
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Registering RDD 1 (sortBy at TransFomationOps.scala:159)
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Got job 0 (foreach at TransFomationOps.scala:174) with 1 output partitions
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Final stage: ResultStage 1 (foreach at TransFomationOps.scala:174)
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Parents of final stage: List(ShuffleMapStage 0)
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Missing parents: List(ShuffleMapStage 0)
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Submitting ShuffleMapStage 0 (MapPartitionsRDD[1] at sortBy at TransFomationOps.scala:159), which has no missing parents
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Block broadcast_0 stored as values in memory (estimated size 3.4 KB, free 3.4 KB)
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Block broadcast_0_piece0 stored as bytes in memory (estimated size 1987.0 B, free 5.3 KB)
+[INFO  2018-03-13 08:50:14][dispatcher-event-loop-2] Logging$class:58 Added broadcast_0_piece0 in memory on localhost:52418 (size: 1987.0 B, free: 2.4 GB)
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[1] at sortBy at TransFomationOps.scala:159)
+[INFO  2018-03-13 08:50:14][dag-scheduler-event-loop] Logging$class:58 Adding task set 0.0 with 2 tasks
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-3] Logging$class:58 Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-3] Logging$class:58 Starting task 1.0 in stage 0.0 (TID 1, localhost, partition 1,PROCESS_LOCAL, 2105 bytes)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 0.0 (TID 0)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-1] Logging$class:58 Running task 1.0 in stage 0.0 (TID 1)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0). 1158 bytes result sent to driver
+[INFO  2018-03-13 08:50:15][Executor task launch worker-1] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1). 1158 bytes result sent to driver
+[INFO  2018-03-13 08:50:15][task-result-getter-1] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1) in 149 ms on localhost (1/2)
+[INFO  2018-03-13 08:50:15][task-result-getter-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0) in 473 ms on localhost (2/2)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 ShuffleMapStage 0 (sortBy at TransFomationOps.scala:159) finished in 0.506 s
+[INFO  2018-03-13 08:50:15][task-result-getter-0] Logging$class:58 Removed TaskSet 0.0, whose tasks have all completed, from pool 
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 looking for newly runnable stages
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 running: Set()
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 waiting: Set(ResultStage 1)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 failed: Set()
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Submitting ResultStage 1 (MapPartitionsRDD[3] at sortBy at TransFomationOps.scala:159), which has no missing parents
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1 stored as values in memory (estimated size 3.6 KB, free 8.8 KB)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 10.9 KB)
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-1] Logging$class:58 Added broadcast_1_piece0 in memory on localhost:52418 (size: 2.0 KB, free: 2.4 GB)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at sortBy at TransFomationOps.scala:159)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Adding task set 1.0 with 1 tasks
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-0] Logging$class:58 Starting task 0.0 in stage 1.0 (TID 2, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-1] Logging$class:58 Running task 0.0 in stage 1.0 (TID 2)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-1] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-13 08:50:15][Executor task launch worker-1] Logging$class:58 Started 0 remote fetches in 9 ms
+[INFO  2018-03-13 08:50:15][Executor task launch worker-1] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2). 1165 bytes result sent to driver
+[INFO  2018-03-13 08:50:15][task-result-getter-2] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2) in 143 ms on localhost (1/1)
+[INFO  2018-03-13 08:50:15][task-result-getter-2] Logging$class:58 Removed TaskSet 1.0, whose tasks have all completed, from pool 
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 ResultStage 1 (foreach at TransFomationOps.scala:174) finished in 0.148 s
+[INFO  2018-03-13 08:50:15][main] Logging$class:58 Job 0 finished: foreach at TransFomationOps.scala:174, took 1.166187 s
+[INFO  2018-03-13 08:50:15][main] Logging$class:58 Starting job: foreach at TransFomationOps.scala:182
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Registering RDD 4 (map at TransFomationOps.scala:177)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Got job 1 (foreach at TransFomationOps.scala:182) with 1 output partitions
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Final stage: ResultStage 3 (foreach at TransFomationOps.scala:182)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Parents of final stage: List(ShuffleMapStage 2)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Missing parents: List(ShuffleMapStage 2)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Submitting ShuffleMapStage 2 (MapPartitionsRDD[4] at map at TransFomationOps.scala:177), which has no missing parents
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2 stored as values in memory (estimated size 3.0 KB, free 13.9 KB)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2_piece0 stored as bytes in memory (estimated size 1798.0 B, free 15.6 KB)
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-1] Logging$class:58 Added broadcast_2_piece0 in memory on localhost:52418 (size: 1798.0 B, free: 2.4 GB)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[4] at map at TransFomationOps.scala:177)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Adding task set 2.0 with 2 tasks
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-0] Logging$class:58 Starting task 0.0 in stage 2.0 (TID 3, localhost, partition 0,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-0] Logging$class:58 Starting task 1.0 in stage 2.0 (TID 4, localhost, partition 1,PROCESS_LOCAL, 2105 bytes)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-0] Logging$class:58 Running task 1.0 in stage 2.0 (TID 4)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-1] Logging$class:58 Running task 0.0 in stage 2.0 (TID 3)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-1] Logging$class:58 Finished task 0.0 in stage 2.0 (TID 3). 1158 bytes result sent to driver
+[INFO  2018-03-13 08:50:15][task-result-getter-3] Logging$class:58 Finished task 0.0 in stage 2.0 (TID 3) in 52 ms on localhost (1/2)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-0] Logging$class:58 Finished task 1.0 in stage 2.0 (TID 4). 1158 bytes result sent to driver
+[INFO  2018-03-13 08:50:15][task-result-getter-1] Logging$class:58 Finished task 1.0 in stage 2.0 (TID 4) in 59 ms on localhost (2/2)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 ShuffleMapStage 2 (map at TransFomationOps.scala:177) finished in 0.064 s
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 looking for newly runnable stages
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 running: Set()
+[INFO  2018-03-13 08:50:15][task-result-getter-1] Logging$class:58 Removed TaskSet 2.0, whose tasks have all completed, from pool 
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 waiting: Set(ResultStage 3)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 failed: Set()
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Submitting ResultStage 3 (ShuffledRDD[5] at sortByKey at TransFomationOps.scala:181), which has no missing parents
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Block broadcast_3 stored as values in memory (estimated size 2.8 KB, free 18.4 KB)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Block broadcast_3_piece0 stored as bytes in memory (estimated size 1690.0 B, free 20.0 KB)
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-2] Logging$class:58 Added broadcast_3_piece0 in memory on localhost:52418 (size: 1690.0 B, free: 2.4 GB)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Submitting 1 missing tasks from ResultStage 3 (ShuffledRDD[5] at sortByKey at TransFomationOps.scala:181)
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 Adding task set 3.0 with 1 tasks
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-0] Logging$class:58 Starting task 0.0 in stage 3.0 (TID 5, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 3.0 (TID 5)
+[INFO  2018-03-13 08:50:15][Executor task launch worker-0] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-13 08:50:15][Executor task launch worker-0] Logging$class:58 Started 0 remote fetches in 1 ms
+[INFO  2018-03-13 08:50:15][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 3.0 (TID 5). 1165 bytes result sent to driver
+[INFO  2018-03-13 08:50:15][task-result-getter-0] Logging$class:58 Finished task 0.0 in stage 3.0 (TID 5) in 24 ms on localhost (1/1)
+[INFO  2018-03-13 08:50:15][task-result-getter-0] Logging$class:58 Removed TaskSet 3.0, whose tasks have all completed, from pool 
+[INFO  2018-03-13 08:50:15][dag-scheduler-event-loop] Logging$class:58 ResultStage 3 (foreach at TransFomationOps.scala:182) finished in 0.032 s
+[INFO  2018-03-13 08:50:15][main] Logging$class:58 Job 1 finished: foreach at TransFomationOps.scala:182, took 0.141481 s
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/api,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/static,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+[INFO  2018-03-13 08:50:15][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs,null}
+[INFO  2018-03-13 08:50:15][main] Logging$class:58 Stopped Spark web UI at http://192.168.68.44:4040
+[INFO  2018-03-13 08:50:15][dispatcher-event-loop-1] Logging$class:58 MapOutputTrackerMasterEndpoint stopped!
+[INFO  2018-03-13 08:50:16][main] Logging$class:58 MemoryStore cleared
+[INFO  2018-03-13 08:50:16][main] Logging$class:58 BlockManager stopped
+[INFO  2018-03-13 08:50:16][main] Logging$class:58 BlockManagerMaster stopped
+[INFO  2018-03-13 08:50:16][dispatcher-event-loop-1] Logging$class:58 OutputCommitCoordinator stopped!
+[INFO  2018-03-13 08:50:16][main] Logging$class:58 Successfully stopped SparkContext
+[INFO  2018-03-13 08:50:16][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Shutting down remote daemon.
+[INFO  2018-03-13 08:50:16][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remote daemon shut down; proceeding with flushing remote transports.
+[INFO  2018-03-13 08:50:16][Thread-2] Logging$class:58 Shutdown hook called
+[INFO  2018-03-13 08:50:16][Thread-2] Logging$class:58 Deleting directory C:\Users\GMW\AppData\Local\Temp\spark-31a2e425-d5fb-4492-b4d4-23dab47f6e9b

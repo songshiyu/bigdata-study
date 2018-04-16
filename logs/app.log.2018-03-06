@@ -1,0 +1,958 @@
+[INFO  2018-03-06 09:30:22][main] Logging$class:58 Running Spark version 1.6.2
+[WARN  2018-03-06 09:30:23][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-03-06 09:30:23][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2198)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+	at com.bigdata.spark.SparkWordCountLamdaOps.main(SparkWordCountLamdaOps.java:18)
+[INFO  2018-03-06 09:30:23][main] Logging$class:58 Changing view acls to: GMW
+[INFO  2018-03-06 09:30:23][main] Logging$class:58 Changing modify acls to: GMW
+[INFO  2018-03-06 09:30:23][main] Logging$class:58 SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(GMW); users with modify permissions: Set(GMW)
+[INFO  2018-03-06 09:30:25][main] Logging$class:58 Successfully started service 'sparkDriver' on port 50928.
+[INFO  2018-03-06 09:30:25][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1:80 Slf4jLogger started
+[INFO  2018-03-06 09:30:25][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Starting remoting
+[INFO  2018-03-06 09:30:26][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.68.44:50949]
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Successfully started service 'sparkDriverActorSystem' on port 50949.
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Registering MapOutputTracker
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Registering BlockManagerMaster
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Created local directory at C:\Users\GMW\AppData\Local\Temp\blockmgr-974ab4e0-78ec-4cae-894d-041904202dfd
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 MemoryStore started with capacity 2.4 GB
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Registering OutputCommitCoordinator
+[INFO  2018-03-06 09:30:26][main] Server:272 jetty-8.y.z-SNAPSHOT
+[INFO  2018-03-06 09:30:26][main] AbstractConnector:338 Started SelectChannelConnector@0.0.0.0:4040
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Successfully started service 'SparkUI' on port 4040.
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Started SparkUI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Starting executor ID driver on host localhost
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 50966.
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Server created on 50966
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Trying to register BlockManager
+[INFO  2018-03-06 09:30:26][dispatcher-event-loop-3] Logging$class:58 Registering block manager localhost:50966 with 2.4 GB RAM, BlockManagerId(driver, localhost, 50966)
+[INFO  2018-03-06 09:30:26][main] Logging$class:58 Registered BlockManager
+[INFO  2018-03-06 09:30:27][main] Logging$class:58 Block broadcast_0 stored as values in memory (estimated size 128.0 KB, free 128.0 KB)
+[INFO  2018-03-06 09:30:27][main] Logging$class:58 Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.1 KB, free 142.1 KB)
+[INFO  2018-03-06 09:30:27][dispatcher-event-loop-1] Logging$class:58 Added broadcast_0_piece0 in memory on localhost:50966 (size: 14.1 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:30:27][main] Logging$class:58 Created broadcast 0 from textFile at SparkWordCountLamdaOps.java:19
+[INFO  2018-03-06 09:30:28][main] FileInputFormat:247 Total input paths to process : 1
+[INFO  2018-03-06 09:30:28][main] Logging$class:58 Starting job: foreach at SparkWordCountLamdaOps.java:33
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Registering RDD 3 (mapToPair at SparkWordCountLamdaOps.java:25)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Got job 0 (foreach at SparkWordCountLamdaOps.java:33) with 1 output partitions
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Final stage: ResultStage 1 (foreach at SparkWordCountLamdaOps.java:33)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Parents of final stage: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Missing parents: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at mapToPair at SparkWordCountLamdaOps.java:25), which has no missing parents
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1 stored as values in memory (estimated size 5.7 KB, free 147.7 KB)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.1 KB, free 150.8 KB)
+[INFO  2018-03-06 09:30:28][dispatcher-event-loop-2] Logging$class:58 Added broadcast_1_piece0 in memory on localhost:50966 (size: 3.1 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at mapToPair at SparkWordCountLamdaOps.java:25)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Adding task set 0.0 with 1 tasks
+[INFO  2018-03-06 09:30:28][dispatcher-event-loop-3] Logging$class:58 Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 0.0 (TID 0)
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Logging$class:58 Input split: file:/F:/data/5.txt:0+174
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Configuration:1129 mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Configuration:1129 mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Configuration:1129 mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Configuration:1129 mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Configuration:1129 mapred.job.id is deprecated. Instead, use mapreduce.job.id
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0). 2253 bytes result sent to driver
+[INFO  2018-03-06 09:30:28][task-result-getter-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0) in 215 ms on localhost (1/1)
+[INFO  2018-03-06 09:30:28][task-result-getter-0] Logging$class:58 Removed TaskSet 0.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 ShuffleMapStage 0 (mapToPair at SparkWordCountLamdaOps.java:25) finished in 0.233 s
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 looking for newly runnable stages
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 running: Set()
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 waiting: Set(ResultStage 1)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 failed: Set()
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Submitting ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountLamdaOps.java:29), which has no missing parents
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2 stored as values in memory (estimated size 3.6 KB, free 154.5 KB)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.1 KB, free 156.6 KB)
+[INFO  2018-03-06 09:30:28][dispatcher-event-loop-2] Logging$class:58 Added broadcast_2_piece0 in memory on localhost:50966 (size: 2.1 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountLamdaOps.java:29)
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 Adding task set 1.0 with 1 tasks
+[INFO  2018-03-06 09:30:28][dispatcher-event-loop-3] Logging$class:58 Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 1.0 (TID 1)
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Logging$class:58 Getting 1 non-empty blocks out of 1 blocks
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Logging$class:58 Started 0 remote fetches in 15 ms
+[INFO  2018-03-06 09:30:28][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 1). 1165 bytes result sent to driver
+[INFO  2018-03-06 09:30:28][task-result-getter-1] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 1) in 81 ms on localhost (1/1)
+[INFO  2018-03-06 09:30:28][task-result-getter-1] Logging$class:58 Removed TaskSet 1.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:30:28][dag-scheduler-event-loop] Logging$class:58 ResultStage 1 (foreach at SparkWordCountLamdaOps.java:33) finished in 0.087 s
+[INFO  2018-03-06 09:30:28][main] Logging$class:58 Job 0 finished: foreach at SparkWordCountLamdaOps.java:33, took 0.463055 s
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/api,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/static,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+[INFO  2018-03-06 09:30:28][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs,null}
+[INFO  2018-03-06 09:30:28][main] Logging$class:58 Stopped Spark web UI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:30:28][dispatcher-event-loop-3] Logging$class:58 MapOutputTrackerMasterEndpoint stopped!
+[INFO  2018-03-06 09:30:28][main] Logging$class:58 MemoryStore cleared
+[INFO  2018-03-06 09:30:28][main] Logging$class:58 BlockManager stopped
+[INFO  2018-03-06 09:30:28][main] Logging$class:58 BlockManagerMaster stopped
+[INFO  2018-03-06 09:30:28][dispatcher-event-loop-3] Logging$class:58 OutputCommitCoordinator stopped!
+[INFO  2018-03-06 09:30:28][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Shutting down remote daemon.
+[INFO  2018-03-06 09:30:28][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remote daemon shut down; proceeding with flushing remote transports.
+[INFO  2018-03-06 09:30:28][main] Logging$class:58 Successfully stopped SparkContext
+[INFO  2018-03-06 09:30:28][Thread-2] Logging$class:58 Shutdown hook called
+[INFO  2018-03-06 09:30:28][Thread-2] Logging$class:58 Deleting directory C:\Users\GMW\AppData\Local\Temp\spark-bab3dcf9-05c7-4a7a-b1fd-c2d579549945
+[INFO  2018-03-06 09:44:41][main] Logging$class:58 Running Spark version 1.6.2
+[WARN  2018-03-06 09:44:42][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-03-06 09:44:42][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2198)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at com.bigdata.spark.SparkWordCountOps$.main(SparkWordCountOps.scala:10)
+	at com.bigdata.spark.SparkWordCountOps.main(SparkWordCountOps.scala)
+[INFO  2018-03-06 09:44:42][main] Logging$class:58 Changing view acls to: GMW
+[INFO  2018-03-06 09:44:42][main] Logging$class:58 Changing modify acls to: GMW
+[INFO  2018-03-06 09:44:42][main] Logging$class:58 SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(GMW); users with modify permissions: Set(GMW)
+[INFO  2018-03-06 09:44:43][main] Logging$class:58 Successfully started service 'sparkDriver' on port 57567.
+[INFO  2018-03-06 09:44:44][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1:80 Slf4jLogger started
+[INFO  2018-03-06 09:44:44][sparkDriverActorSystem-akka.actor.default-dispatcher-4] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Starting remoting
+[INFO  2018-03-06 09:44:44][sparkDriverActorSystem-akka.actor.default-dispatcher-4] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.68.44:57596]
+[INFO  2018-03-06 09:44:44][main] Logging$class:58 Successfully started service 'sparkDriverActorSystem' on port 57596.
+[INFO  2018-03-06 09:44:44][main] Logging$class:58 Registering MapOutputTracker
+[INFO  2018-03-06 09:44:44][main] Logging$class:58 Registering BlockManagerMaster
+[INFO  2018-03-06 09:44:44][main] Logging$class:58 Created local directory at C:\Users\GMW\AppData\Local\Temp\blockmgr-f2620e64-a6de-40c3-8865-53255307210c
+[INFO  2018-03-06 09:44:45][main] Logging$class:58 MemoryStore started with capacity 2.4 GB
+[INFO  2018-03-06 09:44:45][main] Logging$class:58 Registering OutputCommitCoordinator
+[INFO  2018-03-06 09:44:45][main] Server:272 jetty-8.y.z-SNAPSHOT
+[INFO  2018-03-06 09:44:45][main] AbstractConnector:338 Started SelectChannelConnector@0.0.0.0:4040
+[INFO  2018-03-06 09:44:45][main] Logging$class:58 Successfully started service 'SparkUI' on port 4040.
+[INFO  2018-03-06 09:44:45][main] Logging$class:58 Started SparkUI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:44:45][main] Logging$class:58 Starting executor ID driver on host localhost
+[INFO  2018-03-06 09:44:45][main] Logging$class:58 Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 57607.
+[INFO  2018-03-06 09:44:45][main] Logging$class:58 Server created on 57607
+[INFO  2018-03-06 09:44:45][main] Logging$class:58 Trying to register BlockManager
+[INFO  2018-03-06 09:44:45][dispatcher-event-loop-0] Logging$class:58 Registering block manager localhost:57607 with 2.4 GB RAM, BlockManagerId(driver, localhost, 57607)
+[INFO  2018-03-06 09:44:45][main] Logging$class:58 Registered BlockManager
+[INFO  2018-03-06 09:44:46][main] Logging$class:58 Block broadcast_0 stored as values in memory (estimated size 128.0 KB, free 128.0 KB)
+[INFO  2018-03-06 09:44:46][main] Logging$class:58 Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.1 KB, free 142.1 KB)
+[INFO  2018-03-06 09:44:46][dispatcher-event-loop-2] Logging$class:58 Added broadcast_0_piece0 in memory on localhost:57607 (size: 14.1 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:44:46][main] Logging$class:58 Created broadcast 0 from textFile at SparkWordCountOps.scala:11
+[INFO  2018-03-06 09:44:47][main] FileInputFormat:247 Total input paths to process : 1
+[INFO  2018-03-06 09:44:47][main] Logging$class:58 Starting job: foreach at SparkWordCountOps.scala:15
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Registering RDD 3 (map at SparkWordCountOps.scala:13)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Got job 0 (foreach at SparkWordCountOps.scala:15) with 2 output partitions
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Final stage: ResultStage 1 (foreach at SparkWordCountOps.scala:15)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Parents of final stage: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Missing parents: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at map at SparkWordCountOps.scala:13), which has no missing parents
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 146.2 KB)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.3 KB, free 148.5 KB)
+[INFO  2018-03-06 09:44:47][dispatcher-event-loop-3] Logging$class:58 Added broadcast_1_piece0 in memory on localhost:57607 (size: 2.3 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at map at SparkWordCountOps.scala:13)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Adding task set 0.0 with 2 tasks
+[INFO  2018-03-06 09:44:47][dispatcher-event-loop-0] Logging$class:58 Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-06 09:44:47][dispatcher-event-loop-0] Logging$class:58 Starting task 1.0 in stage 0.0 (TID 1, localhost, partition 1,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-06 09:44:47][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 0.0 (TID 0)
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Logging$class:58 Running task 1.0 in stage 0.0 (TID 1)
+[INFO  2018-03-06 09:44:47][Executor task launch worker-0] Logging$class:58 Input split: file:/F:/data/5.txt:0+87
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Logging$class:58 Input split: file:/F:/data/5.txt:87+87
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Configuration:1129 mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Configuration:1129 mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Configuration:1129 mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Configuration:1129 mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Configuration:1129 mapred.job.id is deprecated. Instead, use mapreduce.job.id
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1). 2254 bytes result sent to driver
+[INFO  2018-03-06 09:44:47][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0). 2254 bytes result sent to driver
+[INFO  2018-03-06 09:44:47][task-result-getter-0] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1) in 235 ms on localhost (1/2)
+[INFO  2018-03-06 09:44:47][task-result-getter-1] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0) in 288 ms on localhost (2/2)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 ShuffleMapStage 0 (map at SparkWordCountOps.scala:13) finished in 0.301 s
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 looking for newly runnable stages
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 running: Set()
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 waiting: Set(ResultStage 1)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 failed: Set()
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Submitting ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountOps.scala:14), which has no missing parents
+[INFO  2018-03-06 09:44:47][task-result-getter-1] Logging$class:58 Removed TaskSet 0.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2 stored as values in memory (estimated size 2.5 KB, free 151.0 KB)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2_piece0 stored as bytes in memory (estimated size 1588.0 B, free 152.5 KB)
+[INFO  2018-03-06 09:44:47][dispatcher-event-loop-1] Logging$class:58 Added broadcast_2_piece0 in memory on localhost:57607 (size: 1588.0 B, free: 2.4 GB)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountOps.scala:14)
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 Adding task set 1.0 with 2 tasks
+[INFO  2018-03-06 09:44:47][dispatcher-event-loop-2] Logging$class:58 Starting task 0.0 in stage 1.0 (TID 2, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-06 09:44:47][dispatcher-event-loop-2] Logging$class:58 Starting task 1.0 in stage 1.0 (TID 3, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-06 09:44:47][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 1.0 (TID 2)
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Logging$class:58 Running task 1.0 in stage 1.0 (TID 3)
+[INFO  2018-03-06 09:44:47][Executor task launch worker-0] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-06 09:44:47][Executor task launch worker-0] Logging$class:58 Started 0 remote fetches in 6 ms
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Logging$class:58 Started 0 remote fetches in 8 ms
+[INFO  2018-03-06 09:44:47][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2). 1165 bytes result sent to driver
+[INFO  2018-03-06 09:44:47][task-result-getter-2] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2) in 97 ms on localhost (1/2)
+[INFO  2018-03-06 09:44:47][Executor task launch worker-1] Logging$class:58 Finished task 1.0 in stage 1.0 (TID 3). 1165 bytes result sent to driver
+[INFO  2018-03-06 09:44:47][dag-scheduler-event-loop] Logging$class:58 ResultStage 1 (foreach at SparkWordCountOps.scala:15) finished in 0.124 s
+[INFO  2018-03-06 09:44:47][task-result-getter-3] Logging$class:58 Finished task 1.0 in stage 1.0 (TID 3) in 116 ms on localhost (2/2)
+[INFO  2018-03-06 09:44:47][task-result-getter-3] Logging$class:58 Removed TaskSet 1.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:44:47][main] Logging$class:58 Job 0 finished: foreach at SparkWordCountOps.scala:15, took 0.580726 s
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/api,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/static,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+[INFO  2018-03-06 09:44:47][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs,null}
+[INFO  2018-03-06 09:44:47][main] Logging$class:58 Stopped Spark web UI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:44:47][dispatcher-event-loop-0] Logging$class:58 MapOutputTrackerMasterEndpoint stopped!
+[INFO  2018-03-06 09:44:47][main] Logging$class:58 MemoryStore cleared
+[INFO  2018-03-06 09:44:47][main] Logging$class:58 BlockManager stopped
+[INFO  2018-03-06 09:44:47][main] Logging$class:58 BlockManagerMaster stopped
+[INFO  2018-03-06 09:44:47][dispatcher-event-loop-3] Logging$class:58 OutputCommitCoordinator stopped!
+[INFO  2018-03-06 09:44:47][sparkDriverActorSystem-akka.actor.default-dispatcher-4] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Shutting down remote daemon.
+[INFO  2018-03-06 09:44:47][main] Logging$class:58 Successfully stopped SparkContext
+[INFO  2018-03-06 09:44:47][sparkDriverActorSystem-akka.actor.default-dispatcher-5] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remote daemon shut down; proceeding with flushing remote transports.
+[INFO  2018-03-06 09:44:47][Thread-2] Logging$class:58 Shutdown hook called
+[INFO  2018-03-06 09:44:47][Thread-2] Logging$class:58 Deleting directory C:\Users\GMW\AppData\Local\Temp\spark-947663a0-50eb-4a0f-b49b-1a1e9f877bea
+[INFO  2018-03-06 09:45:24][main] Logging$class:58 Running Spark version 1.6.2
+[WARN  2018-03-06 09:45:25][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-03-06 09:45:25][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2198)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at com.bigdata.spark.SparkWordCountOps$.main(SparkWordCountOps.scala:10)
+	at com.bigdata.spark.SparkWordCountOps.main(SparkWordCountOps.scala)
+[INFO  2018-03-06 09:45:25][main] Logging$class:58 Changing view acls to: GMW
+[INFO  2018-03-06 09:45:25][main] Logging$class:58 Changing modify acls to: GMW
+[INFO  2018-03-06 09:45:25][main] Logging$class:58 SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(GMW); users with modify permissions: Set(GMW)
+[INFO  2018-03-06 09:45:27][main] Logging$class:58 Successfully started service 'sparkDriver' on port 57880.
+[INFO  2018-03-06 09:45:27][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1:80 Slf4jLogger started
+[INFO  2018-03-06 09:45:27][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Starting remoting
+[INFO  2018-03-06 09:45:27][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.68.44:57894]
+[INFO  2018-03-06 09:45:27][main] Logging$class:58 Successfully started service 'sparkDriverActorSystem' on port 57894.
+[INFO  2018-03-06 09:45:27][main] Logging$class:58 Registering MapOutputTracker
+[INFO  2018-03-06 09:45:27][main] Logging$class:58 Registering BlockManagerMaster
+[INFO  2018-03-06 09:45:27][main] Logging$class:58 Created local directory at C:\Users\GMW\AppData\Local\Temp\blockmgr-cfc1bbb2-3a21-401c-8522-acfb8964dddf
+[INFO  2018-03-06 09:45:27][main] Logging$class:58 MemoryStore started with capacity 2.4 GB
+[INFO  2018-03-06 09:45:27][main] Logging$class:58 Registering OutputCommitCoordinator
+[INFO  2018-03-06 09:45:28][main] Server:272 jetty-8.y.z-SNAPSHOT
+[INFO  2018-03-06 09:45:28][main] AbstractConnector:338 Started SelectChannelConnector@0.0.0.0:4040
+[INFO  2018-03-06 09:45:28][main] Logging$class:58 Successfully started service 'SparkUI' on port 4040.
+[INFO  2018-03-06 09:45:28][main] Logging$class:58 Started SparkUI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:45:28][main] Logging$class:58 Starting executor ID driver on host localhost
+[INFO  2018-03-06 09:45:28][main] Logging$class:58 Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 57905.
+[INFO  2018-03-06 09:45:28][main] Logging$class:58 Server created on 57905
+[INFO  2018-03-06 09:45:28][main] Logging$class:58 Trying to register BlockManager
+[INFO  2018-03-06 09:45:28][dispatcher-event-loop-3] Logging$class:58 Registering block manager localhost:57905 with 2.4 GB RAM, BlockManagerId(driver, localhost, 57905)
+[INFO  2018-03-06 09:45:28][main] Logging$class:58 Registered BlockManager
+[INFO  2018-03-06 09:45:29][main] Logging$class:58 Block broadcast_0 stored as values in memory (estimated size 128.0 KB, free 128.0 KB)
+[INFO  2018-03-06 09:45:29][main] Logging$class:58 Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.1 KB, free 142.1 KB)
+[INFO  2018-03-06 09:45:29][dispatcher-event-loop-1] Logging$class:58 Added broadcast_0_piece0 in memory on localhost:57905 (size: 14.1 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:45:29][main] Logging$class:58 Created broadcast 0 from textFile at SparkWordCountOps.scala:11
+[INFO  2018-03-06 09:45:29][main] FileInputFormat:247 Total input paths to process : 1
+[INFO  2018-03-06 09:45:29][main] Logging$class:58 Starting job: foreach at SparkWordCountOps.scala:15
+[INFO  2018-03-06 09:45:29][dag-scheduler-event-loop] Logging$class:58 Registering RDD 3 (map at SparkWordCountOps.scala:13)
+[INFO  2018-03-06 09:45:29][dag-scheduler-event-loop] Logging$class:58 Got job 0 (foreach at SparkWordCountOps.scala:15) with 2 output partitions
+[INFO  2018-03-06 09:45:29][dag-scheduler-event-loop] Logging$class:58 Final stage: ResultStage 1 (foreach at SparkWordCountOps.scala:15)
+[INFO  2018-03-06 09:45:29][dag-scheduler-event-loop] Logging$class:58 Parents of final stage: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:45:29][dag-scheduler-event-loop] Logging$class:58 Missing parents: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:45:29][dag-scheduler-event-loop] Logging$class:58 Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at map at SparkWordCountOps.scala:13), which has no missing parents
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 146.2 KB)
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.3 KB, free 148.5 KB)
+[INFO  2018-03-06 09:45:30][dispatcher-event-loop-2] Logging$class:58 Added broadcast_1_piece0 in memory on localhost:57905 (size: 2.3 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at map at SparkWordCountOps.scala:13)
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Adding task set 0.0 with 2 tasks
+[INFO  2018-03-06 09:45:30][dispatcher-event-loop-3] Logging$class:58 Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-06 09:45:30][dispatcher-event-loop-3] Logging$class:58 Starting task 1.0 in stage 0.0 (TID 1, localhost, partition 1,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-06 09:45:30][Executor task launch worker-1] Logging$class:58 Running task 1.0 in stage 0.0 (TID 1)
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 0.0 (TID 0)
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Logging$class:58 Input split: file:/F:/data/5.txt:0+87
+[INFO  2018-03-06 09:45:30][Executor task launch worker-1] Logging$class:58 Input split: file:/F:/data/5.txt:87+87
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Configuration:1129 mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Configuration:1129 mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Configuration:1129 mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Configuration:1129 mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Configuration:1129 mapred.job.id is deprecated. Instead, use mapreduce.job.id
+[INFO  2018-03-06 09:45:30][Executor task launch worker-1] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1). 2254 bytes result sent to driver
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0). 2254 bytes result sent to driver
+[INFO  2018-03-06 09:45:30][task-result-getter-1] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0) in 256 ms on localhost (1/2)
+[INFO  2018-03-06 09:45:30][task-result-getter-0] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1) in 237 ms on localhost (2/2)
+[INFO  2018-03-06 09:45:30][task-result-getter-0] Logging$class:58 Removed TaskSet 0.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 ShuffleMapStage 0 (map at SparkWordCountOps.scala:13) finished in 0.279 s
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 looking for newly runnable stages
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 running: Set()
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 waiting: Set(ResultStage 1)
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 failed: Set()
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Submitting ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountOps.scala:14), which has no missing parents
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2 stored as values in memory (estimated size 2.5 KB, free 151.0 KB)
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2_piece0 stored as bytes in memory (estimated size 1588.0 B, free 152.5 KB)
+[INFO  2018-03-06 09:45:30][dispatcher-event-loop-1] Logging$class:58 Added broadcast_2_piece0 in memory on localhost:57905 (size: 1588.0 B, free: 2.4 GB)
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountOps.scala:14)
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 Adding task set 1.0 with 2 tasks
+[INFO  2018-03-06 09:45:30][dispatcher-event-loop-0] Logging$class:58 Starting task 0.0 in stage 1.0 (TID 2, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-06 09:45:30][dispatcher-event-loop-0] Logging$class:58 Starting task 1.0 in stage 1.0 (TID 3, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Logging$class:58 Running task 1.0 in stage 1.0 (TID 3)
+[INFO  2018-03-06 09:45:30][Executor task launch worker-1] Logging$class:58 Running task 0.0 in stage 1.0 (TID 2)
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Logging$class:58 Started 0 remote fetches in 6 ms
+[INFO  2018-03-06 09:45:30][Executor task launch worker-1] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-06 09:45:30][Executor task launch worker-1] Logging$class:58 Started 0 remote fetches in 1 ms
+[INFO  2018-03-06 09:45:30][Executor task launch worker-1] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2). 1165 bytes result sent to driver
+[INFO  2018-03-06 09:45:30][Executor task launch worker-0] Logging$class:58 Finished task 1.0 in stage 1.0 (TID 3). 1165 bytes result sent to driver
+[INFO  2018-03-06 09:45:30][task-result-getter-2] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2) in 78 ms on localhost (1/2)
+[INFO  2018-03-06 09:45:30][task-result-getter-3] Logging$class:58 Finished task 1.0 in stage 1.0 (TID 3) in 76 ms on localhost (2/2)
+[INFO  2018-03-06 09:45:30][task-result-getter-3] Logging$class:58 Removed TaskSet 1.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:45:30][dag-scheduler-event-loop] Logging$class:58 ResultStage 1 (foreach at SparkWordCountOps.scala:15) finished in 0.083 s
+[INFO  2018-03-06 09:45:30][main] Logging$class:58 Job 0 finished: foreach at SparkWordCountOps.scala:15, took 0.521131 s
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/api,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/static,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+[INFO  2018-03-06 09:45:30][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs,null}
+[INFO  2018-03-06 09:45:30][main] Logging$class:58 Stopped Spark web UI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:45:30][dispatcher-event-loop-3] Logging$class:58 MapOutputTrackerMasterEndpoint stopped!
+[INFO  2018-03-06 09:45:30][main] Logging$class:58 MemoryStore cleared
+[INFO  2018-03-06 09:45:30][main] Logging$class:58 BlockManager stopped
+[INFO  2018-03-06 09:45:30][main] Logging$class:58 BlockManagerMaster stopped
+[INFO  2018-03-06 09:45:30][dispatcher-event-loop-0] Logging$class:58 OutputCommitCoordinator stopped!
+[INFO  2018-03-06 09:45:30][sparkDriverActorSystem-akka.actor.default-dispatcher-5] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Shutting down remote daemon.
+[INFO  2018-03-06 09:45:30][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remote daemon shut down; proceeding with flushing remote transports.
+[INFO  2018-03-06 09:45:30][main] Logging$class:58 Successfully stopped SparkContext
+[INFO  2018-03-06 09:45:30][Thread-2] Logging$class:58 Shutdown hook called
+[INFO  2018-03-06 09:45:30][Thread-2] Logging$class:58 Deleting directory C:\Users\GMW\AppData\Local\Temp\spark-5cf49b48-a5e3-4421-b7f9-300692a092fd
+[INFO  2018-03-06 09:49:19][main] Logging$class:58 Running Spark version 1.6.2
+[WARN  2018-03-06 09:49:20][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-03-06 09:49:21][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2198)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at com.bigdata.spark.SparkWordCountOps$.main(SparkWordCountOps.scala:10)
+	at com.bigdata.spark.SparkWordCountOps.main(SparkWordCountOps.scala)
+[INFO  2018-03-06 09:49:21][main] Logging$class:58 Changing view acls to: GMW
+[INFO  2018-03-06 09:49:21][main] Logging$class:58 Changing modify acls to: GMW
+[INFO  2018-03-06 09:49:21][main] Logging$class:58 SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(GMW); users with modify permissions: Set(GMW)
+[INFO  2018-03-06 09:49:22][main] Logging$class:58 Successfully started service 'sparkDriver' on port 59757.
+[INFO  2018-03-06 09:49:23][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1:80 Slf4jLogger started
+[INFO  2018-03-06 09:49:23][sparkDriverActorSystem-akka.actor.default-dispatcher-5] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Starting remoting
+[INFO  2018-03-06 09:49:23][sparkDriverActorSystem-akka.actor.default-dispatcher-5] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.68.44:59770]
+[INFO  2018-03-06 09:49:23][main] Logging$class:58 Successfully started service 'sparkDriverActorSystem' on port 59770.
+[INFO  2018-03-06 09:49:23][main] Logging$class:58 Registering MapOutputTracker
+[INFO  2018-03-06 09:49:23][main] Logging$class:58 Registering BlockManagerMaster
+[INFO  2018-03-06 09:49:23][main] Logging$class:58 Created local directory at C:\Users\GMW\AppData\Local\Temp\blockmgr-fd6f1f7f-1e21-4de7-92f2-636beacc667a
+[INFO  2018-03-06 09:49:23][main] Logging$class:58 MemoryStore started with capacity 2.4 GB
+[INFO  2018-03-06 09:49:23][main] Logging$class:58 Registering OutputCommitCoordinator
+[INFO  2018-03-06 09:49:23][main] Server:272 jetty-8.y.z-SNAPSHOT
+[INFO  2018-03-06 09:49:23][main] AbstractConnector:338 Started SelectChannelConnector@0.0.0.0:4040
+[INFO  2018-03-06 09:49:23][main] Logging$class:58 Successfully started service 'SparkUI' on port 4040.
+[INFO  2018-03-06 09:49:23][main] Logging$class:58 Started SparkUI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:49:24][main] Logging$class:58 Starting executor ID driver on host localhost
+[INFO  2018-03-06 09:49:24][main] Logging$class:58 Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 59782.
+[INFO  2018-03-06 09:49:24][main] Logging$class:58 Server created on 59782
+[INFO  2018-03-06 09:49:24][main] Logging$class:58 Trying to register BlockManager
+[INFO  2018-03-06 09:49:24][dispatcher-event-loop-3] Logging$class:58 Registering block manager localhost:59782 with 2.4 GB RAM, BlockManagerId(driver, localhost, 59782)
+[INFO  2018-03-06 09:49:24][main] Logging$class:58 Registered BlockManager
+[INFO  2018-03-06 09:49:25][main] Logging$class:58 Block broadcast_0 stored as values in memory (estimated size 128.0 KB, free 128.0 KB)
+[INFO  2018-03-06 09:49:25][main] Logging$class:58 Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.1 KB, free 142.1 KB)
+[INFO  2018-03-06 09:49:25][dispatcher-event-loop-1] Logging$class:58 Added broadcast_0_piece0 in memory on localhost:59782 (size: 14.1 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:49:25][main] Logging$class:58 Created broadcast 0 from textFile at SparkWordCountOps.scala:11
+[INFO  2018-03-06 09:49:25][main] FileInputFormat:247 Total input paths to process : 1
+[INFO  2018-03-06 09:49:25][main] Logging$class:58 Starting job: foreach at SparkWordCountOps.scala:19
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Registering RDD 3 (map at SparkWordCountOps.scala:17)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Got job 0 (foreach at SparkWordCountOps.scala:19) with 2 output partitions
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Final stage: ResultStage 1 (foreach at SparkWordCountOps.scala:19)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Parents of final stage: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Missing parents: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at map at SparkWordCountOps.scala:17), which has no missing parents
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 146.2 KB)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.3 KB, free 148.5 KB)
+[INFO  2018-03-06 09:49:25][dispatcher-event-loop-0] Logging$class:58 Added broadcast_1_piece0 in memory on localhost:59782 (size: 2.3 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at map at SparkWordCountOps.scala:17)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Adding task set 0.0 with 2 tasks
+[INFO  2018-03-06 09:49:25][dispatcher-event-loop-3] Logging$class:58 Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-06 09:49:25][dispatcher-event-loop-3] Logging$class:58 Starting task 1.0 in stage 0.0 (TID 1, localhost, partition 1,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-06 09:49:25][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 0.0 (TID 0)
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Logging$class:58 Running task 1.0 in stage 0.0 (TID 1)
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Logging$class:58 Input split: file:/F:/data/5.txt:87+87
+[INFO  2018-03-06 09:49:25][Executor task launch worker-0] Logging$class:58 Input split: file:/F:/data/5.txt:0+87
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Configuration:1129 mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Configuration:1129 mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Configuration:1129 mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Configuration:1129 mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Configuration:1129 mapred.job.id is deprecated. Instead, use mapreduce.job.id
+[INFO  2018-03-06 09:49:25][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0). 2254 bytes result sent to driver
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1). 2254 bytes result sent to driver
+[INFO  2018-03-06 09:49:25][task-result-getter-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0) in 226 ms on localhost (1/2)
+[INFO  2018-03-06 09:49:25][task-result-getter-1] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1) in 213 ms on localhost (2/2)
+[INFO  2018-03-06 09:49:25][task-result-getter-1] Logging$class:58 Removed TaskSet 0.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 ShuffleMapStage 0 (map at SparkWordCountOps.scala:17) finished in 0.243 s
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 looking for newly runnable stages
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 running: Set()
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 waiting: Set(ResultStage 1)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 failed: Set()
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Submitting ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountOps.scala:18), which has no missing parents
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2 stored as values in memory (estimated size 2.5 KB, free 151.0 KB)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2_piece0 stored as bytes in memory (estimated size 1588.0 B, free 152.5 KB)
+[INFO  2018-03-06 09:49:25][dispatcher-event-loop-1] Logging$class:58 Added broadcast_2_piece0 in memory on localhost:59782 (size: 1588.0 B, free: 2.4 GB)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountOps.scala:18)
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 Adding task set 1.0 with 2 tasks
+[INFO  2018-03-06 09:49:25][dispatcher-event-loop-2] Logging$class:58 Starting task 0.0 in stage 1.0 (TID 2, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-06 09:49:25][dispatcher-event-loop-2] Logging$class:58 Starting task 1.0 in stage 1.0 (TID 3, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Logging$class:58 Running task 0.0 in stage 1.0 (TID 2)
+[INFO  2018-03-06 09:49:25][Executor task launch worker-0] Logging$class:58 Running task 1.0 in stage 1.0 (TID 3)
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-06 09:49:25][Executor task launch worker-0] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-06 09:49:25][Executor task launch worker-0] Logging$class:58 Started 0 remote fetches in 5 ms
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Logging$class:58 Started 0 remote fetches in 7 ms
+[INFO  2018-03-06 09:49:25][Executor task launch worker-1] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2). 1165 bytes result sent to driver
+[INFO  2018-03-06 09:49:25][Executor task launch worker-0] Logging$class:58 Finished task 1.0 in stage 1.0 (TID 3). 1165 bytes result sent to driver
+[INFO  2018-03-06 09:49:25][task-result-getter-2] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2) in 68 ms on localhost (1/2)
+[INFO  2018-03-06 09:49:25][task-result-getter-3] Logging$class:58 Finished task 1.0 in stage 1.0 (TID 3) in 78 ms on localhost (2/2)
+[INFO  2018-03-06 09:49:25][task-result-getter-3] Logging$class:58 Removed TaskSet 1.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:49:25][dag-scheduler-event-loop] Logging$class:58 ResultStage 1 (foreach at SparkWordCountOps.scala:19) finished in 0.089 s
+[INFO  2018-03-06 09:49:25][main] Logging$class:58 Job 0 finished: foreach at SparkWordCountOps.scala:19, took 0.458491 s
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/api,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/static,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+[INFO  2018-03-06 09:49:25][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs,null}
+[INFO  2018-03-06 09:49:25][main] Logging$class:58 Stopped Spark web UI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:49:25][dispatcher-event-loop-1] Logging$class:58 MapOutputTrackerMasterEndpoint stopped!
+[INFO  2018-03-06 09:49:25][main] Logging$class:58 MemoryStore cleared
+[INFO  2018-03-06 09:49:25][main] Logging$class:58 BlockManager stopped
+[INFO  2018-03-06 09:49:25][main] Logging$class:58 BlockManagerMaster stopped
+[INFO  2018-03-06 09:49:25][dispatcher-event-loop-2] Logging$class:58 OutputCommitCoordinator stopped!
+[INFO  2018-03-06 09:49:25][sparkDriverActorSystem-akka.actor.default-dispatcher-5] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Shutting down remote daemon.
+[INFO  2018-03-06 09:49:25][sparkDriverActorSystem-akka.actor.default-dispatcher-5] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remote daemon shut down; proceeding with flushing remote transports.
+[INFO  2018-03-06 09:49:26][main] Logging$class:58 Successfully stopped SparkContext
+[INFO  2018-03-06 09:49:26][Thread-2] Logging$class:58 Shutdown hook called
+[INFO  2018-03-06 09:49:26][Thread-2] Logging$class:58 Deleting directory C:\Users\GMW\AppData\Local\Temp\spark-2e3813dc-707c-4b27-b977-575425a092c9
+[INFO  2018-03-06 09:51:54][main] Logging$class:58 Running Spark version 1.6.2
+[WARN  2018-03-06 09:51:55][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-03-06 09:51:55][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2198)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at com.bigdata.spark.SparkWordCountOps$.main(SparkWordCountOps.scala:10)
+	at com.bigdata.spark.SparkWordCountOps.main(SparkWordCountOps.scala)
+[INFO  2018-03-06 09:51:55][main] Logging$class:58 Changing view acls to: GMW
+[INFO  2018-03-06 09:51:55][main] Logging$class:58 Changing modify acls to: GMW
+[INFO  2018-03-06 09:51:55][main] Logging$class:58 SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(GMW); users with modify permissions: Set(GMW)
+[INFO  2018-03-06 09:51:57][main] Logging$class:58 Successfully started service 'sparkDriver' on port 61115.
+[INFO  2018-03-06 09:51:58][sparkDriverActorSystem-akka.actor.default-dispatcher-4] Slf4jLogger$$anonfun$receive$1:80 Slf4jLogger started
+[INFO  2018-03-06 09:51:58][sparkDriverActorSystem-akka.actor.default-dispatcher-4] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Starting remoting
+[INFO  2018-03-06 09:51:58][main] Logging$class:58 Successfully started service 'sparkDriverActorSystem' on port 61128.
+[INFO  2018-03-06 09:51:58][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.68.44:61128]
+[INFO  2018-03-06 09:51:58][main] Logging$class:58 Registering MapOutputTracker
+[INFO  2018-03-06 09:51:58][main] Logging$class:58 Registering BlockManagerMaster
+[INFO  2018-03-06 09:51:58][main] Logging$class:58 Created local directory at C:\Users\GMW\AppData\Local\Temp\blockmgr-f8a9c414-08f9-47ee-aa3a-8f7fdba74f87
+[INFO  2018-03-06 09:51:58][main] Logging$class:58 MemoryStore started with capacity 2.4 GB
+[INFO  2018-03-06 09:51:58][main] Logging$class:58 Registering OutputCommitCoordinator
+[INFO  2018-03-06 09:51:59][main] Server:272 jetty-8.y.z-SNAPSHOT
+[INFO  2018-03-06 09:51:59][main] AbstractConnector:338 Started SelectChannelConnector@0.0.0.0:4040
+[INFO  2018-03-06 09:51:59][main] Logging$class:58 Successfully started service 'SparkUI' on port 4040.
+[INFO  2018-03-06 09:51:59][main] Logging$class:58 Started SparkUI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:51:59][main] Logging$class:58 Starting executor ID driver on host localhost
+[INFO  2018-03-06 09:51:59][main] Logging$class:58 Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 61149.
+[INFO  2018-03-06 09:51:59][main] Logging$class:58 Server created on 61149
+[INFO  2018-03-06 09:51:59][main] Logging$class:58 Trying to register BlockManager
+[INFO  2018-03-06 09:51:59][dispatcher-event-loop-1] Logging$class:58 Registering block manager localhost:61149 with 2.4 GB RAM, BlockManagerId(driver, localhost, 61149)
+[INFO  2018-03-06 09:51:59][main] Logging$class:58 Registered BlockManager
+[INFO  2018-03-06 09:52:00][main] Logging$class:58 Block broadcast_0 stored as values in memory (estimated size 128.0 KB, free 128.0 KB)
+[INFO  2018-03-06 09:52:00][main] Logging$class:58 Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.1 KB, free 142.1 KB)
+[INFO  2018-03-06 09:52:00][dispatcher-event-loop-2] Logging$class:58 Added broadcast_0_piece0 in memory on localhost:61149 (size: 14.1 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:52:00][main] Logging$class:58 Created broadcast 0 from textFile at SparkWordCountOps.scala:11
+[INFO  2018-03-06 09:52:01][main] FileInputFormat:247 Total input paths to process : 1
+[INFO  2018-03-06 09:52:01][main] Logging$class:58 Starting job: foreach at SparkWordCountOps.scala:25
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Registering RDD 3 (map at SparkWordCountOps.scala:25)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Got job 0 (foreach at SparkWordCountOps.scala:25) with 2 output partitions
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Final stage: ResultStage 1 (foreach at SparkWordCountOps.scala:25)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Parents of final stage: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Missing parents: List(ShuffleMapStage 0)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at map at SparkWordCountOps.scala:25), which has no missing parents
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 146.2 KB)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.3 KB, free 148.5 KB)
+[INFO  2018-03-06 09:52:01][dispatcher-event-loop-3] Logging$class:58 Added broadcast_1_piece0 in memory on localhost:61149 (size: 2.3 KB, free: 2.4 GB)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at map at SparkWordCountOps.scala:25)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Adding task set 0.0 with 2 tasks
+[INFO  2018-03-06 09:52:01][dispatcher-event-loop-1] Logging$class:58 Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-06 09:52:01][dispatcher-event-loop-1] Logging$class:58 Starting task 1.0 in stage 0.0 (TID 1, localhost, partition 1,PROCESS_LOCAL, 2110 bytes)
+[INFO  2018-03-06 09:52:01][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 0.0 (TID 0)
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Logging$class:58 Running task 1.0 in stage 0.0 (TID 1)
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Logging$class:58 Input split: file:/F:/data/5.txt:87+87
+[INFO  2018-03-06 09:52:01][Executor task launch worker-0] Logging$class:58 Input split: file:/F:/data/5.txt:0+87
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Configuration:1129 mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Configuration:1129 mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+[INFO  2018-03-06 09:52:01][Executor task launch worker-0] Configuration:1129 mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Configuration:1129 mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Configuration:1129 mapred.job.id is deprecated. Instead, use mapreduce.job.id
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1). 2254 bytes result sent to driver
+[INFO  2018-03-06 09:52:01][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0). 2254 bytes result sent to driver
+[INFO  2018-03-06 09:52:01][task-result-getter-1] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0) in 284 ms on localhost (1/2)
+[INFO  2018-03-06 09:52:01][task-result-getter-0] Logging$class:58 Finished task 1.0 in stage 0.0 (TID 1) in 272 ms on localhost (2/2)
+[INFO  2018-03-06 09:52:01][task-result-getter-0] Logging$class:58 Removed TaskSet 0.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 ShuffleMapStage 0 (map at SparkWordCountOps.scala:25) finished in 0.308 s
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 looking for newly runnable stages
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 running: Set()
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 waiting: Set(ResultStage 1)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 failed: Set()
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Submitting ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountOps.scala:25), which has no missing parents
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2 stored as values in memory (estimated size 2.5 KB, free 151.0 KB)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Block broadcast_2_piece0 stored as bytes in memory (estimated size 1586.0 B, free 152.5 KB)
+[INFO  2018-03-06 09:52:01][dispatcher-event-loop-2] Logging$class:58 Added broadcast_2_piece0 in memory on localhost:61149 (size: 1586.0 B, free: 2.4 GB)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Submitting 2 missing tasks from ResultStage 1 (ShuffledRDD[4] at reduceByKey at SparkWordCountOps.scala:25)
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 Adding task set 1.0 with 2 tasks
+[INFO  2018-03-06 09:52:01][dispatcher-event-loop-0] Logging$class:58 Starting task 0.0 in stage 1.0 (TID 2, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-06 09:52:01][dispatcher-event-loop-0] Logging$class:58 Starting task 1.0 in stage 1.0 (TID 3, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Logging$class:58 Running task 1.0 in stage 1.0 (TID 3)
+[INFO  2018-03-06 09:52:01][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 1.0 (TID 2)
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-06 09:52:01][Executor task launch worker-0] Logging$class:58 Getting 2 non-empty blocks out of 2 blocks
+[INFO  2018-03-06 09:52:01][Executor task launch worker-0] Logging$class:58 Started 0 remote fetches in 5 ms
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Logging$class:58 Started 0 remote fetches in 5 ms
+[INFO  2018-03-06 09:52:01][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2). 1165 bytes result sent to driver
+[INFO  2018-03-06 09:52:01][Executor task launch worker-1] Logging$class:58 Finished task 1.0 in stage 1.0 (TID 3). 1165 bytes result sent to driver
+[INFO  2018-03-06 09:52:01][task-result-getter-3] Logging$class:58 Finished task 1.0 in stage 1.0 (TID 3) in 72 ms on localhost (1/2)
+[INFO  2018-03-06 09:52:01][task-result-getter-2] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 2) in 82 ms on localhost (2/2)
+[INFO  2018-03-06 09:52:01][task-result-getter-2] Logging$class:58 Removed TaskSet 1.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 09:52:01][dag-scheduler-event-loop] Logging$class:58 ResultStage 1 (foreach at SparkWordCountOps.scala:25) finished in 0.084 s
+[INFO  2018-03-06 09:52:01][main] Logging$class:58 Job 0 finished: foreach at SparkWordCountOps.scala:25, took 0.568635 s
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/api,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/static,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+[INFO  2018-03-06 09:52:01][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+[INFO  2018-03-06 09:52:02][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages,null}
+[INFO  2018-03-06 09:52:02][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+[INFO  2018-03-06 09:52:02][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+[INFO  2018-03-06 09:52:02][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+[INFO  2018-03-06 09:52:02][main] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs,null}
+[INFO  2018-03-06 09:52:02][main] Logging$class:58 Stopped Spark web UI at http://192.168.68.44:4040
+[INFO  2018-03-06 09:52:02][dispatcher-event-loop-2] Logging$class:58 MapOutputTrackerMasterEndpoint stopped!
+[INFO  2018-03-06 09:52:02][main] Logging$class:58 MemoryStore cleared
+[INFO  2018-03-06 09:52:02][main] Logging$class:58 BlockManager stopped
+[INFO  2018-03-06 09:52:02][main] Logging$class:58 BlockManagerMaster stopped
+[INFO  2018-03-06 09:52:02][dispatcher-event-loop-0] Logging$class:58 OutputCommitCoordinator stopped!
+[INFO  2018-03-06 09:52:02][sparkDriverActorSystem-akka.actor.default-dispatcher-4] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Shutting down remote daemon.
+[INFO  2018-03-06 09:52:02][sparkDriverActorSystem-akka.actor.default-dispatcher-4] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remote daemon shut down; proceeding with flushing remote transports.
+[INFO  2018-03-06 09:52:02][main] Logging$class:58 Successfully stopped SparkContext
+[INFO  2018-03-06 09:52:02][Thread-2] Logging$class:58 Shutdown hook called
+[INFO  2018-03-06 09:52:02][Thread-2] Logging$class:58 Deleting directory C:\Users\GMW\AppData\Local\Temp\spark-d1366617-2265-4680-9e5e-1464a7f573aa
+[INFO  2018-03-06 10:13:36][main] Logging$class:58 Running Spark version 1.6.2
+[WARN  2018-03-06 10:13:37][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-03-06 10:13:38][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2198)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at com.bigdata.spark.SparkWordCountOps$.main(SparkWordCountOps.scala:12)
+	at com.bigdata.spark.SparkWordCountOps.main(SparkWordCountOps.scala)
+[INFO  2018-03-06 10:13:38][main] Logging$class:58 Changing view acls to: GMW
+[INFO  2018-03-06 10:13:38][main] Logging$class:58 Changing modify acls to: GMW
+[INFO  2018-03-06 10:13:38][main] Logging$class:58 SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(GMW); users with modify permissions: Set(GMW)
+[INFO  2018-03-06 10:13:40][main] Logging$class:58 Successfully started service 'sparkDriver' on port 55275.
+[INFO  2018-03-06 10:13:41][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1:80 Slf4jLogger started
+[INFO  2018-03-06 10:13:41][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Starting remoting
+[INFO  2018-03-06 10:13:41][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.68.44:55296]
+[INFO  2018-03-06 10:13:41][main] Logging$class:58 Successfully started service 'sparkDriverActorSystem' on port 55296.
+[INFO  2018-03-06 10:13:41][main] Logging$class:58 Registering MapOutputTracker
+[INFO  2018-03-06 10:13:41][main] Logging$class:58 Registering BlockManagerMaster
+[INFO  2018-03-06 10:13:41][main] Logging$class:58 Created local directory at C:\Users\GMW\AppData\Local\Temp\blockmgr-ec8e4b5e-7a78-4ad9-8617-f9823d9e0ddb
+[INFO  2018-03-06 10:13:41][main] Logging$class:58 MemoryStore started with capacity 2.4 GB
+[INFO  2018-03-06 10:13:41][main] Logging$class:58 Registering OutputCommitCoordinator
+[INFO  2018-03-06 10:13:42][main] Server:272 jetty-8.y.z-SNAPSHOT
+[INFO  2018-03-06 10:13:42][main] AbstractConnector:338 Started SelectChannelConnector@0.0.0.0:4040
+[INFO  2018-03-06 10:13:42][main] Logging$class:58 Successfully started service 'SparkUI' on port 4040.
+[INFO  2018-03-06 10:13:42][main] Logging$class:58 Started SparkUI at http://192.168.68.44:4040
+[INFO  2018-03-06 10:13:42][appclient-register-master-threadpool-0] Logging$class:58 Connecting to master spark://songshiyu001:7077...
+[INFO  2018-03-06 10:13:43][dispatcher-event-loop-0] Logging$class:58 Connected to Spark cluster with app ID app-20180305181343-0000
+[INFO  2018-03-06 10:13:43][main] Logging$class:58 Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55325.
+[INFO  2018-03-06 10:13:43][main] Logging$class:58 Server created on 55325
+[INFO  2018-03-06 10:13:43][main] Logging$class:58 Trying to register BlockManager
+[INFO  2018-03-06 10:13:43][dispatcher-event-loop-3] Logging$class:58 Registering block manager 192.168.68.44:55325 with 2.4 GB RAM, BlockManagerId(driver, 192.168.68.44, 55325)
+[INFO  2018-03-06 10:13:43][main] Logging$class:58 Registered BlockManager
+[INFO  2018-03-06 10:13:43][dispatcher-event-loop-2] Logging$class:58 Executor added: app-20180305181343-0000/0 on worker-20180305180236-192.168.137.129-43360 (192.168.137.129:43360) with 1 cores
+[INFO  2018-03-06 10:13:43][dispatcher-event-loop-2] Logging$class:58 Granted executor ID app-20180305181343-0000/0 on hostPort 192.168.137.129:43360 with 1 cores, 1024.0 MB RAM
+[INFO  2018-03-06 10:13:43][dispatcher-event-loop-2] Logging$class:58 Executor added: app-20180305181343-0000/1 on worker-20180305180236-192.168.137.130-45819 (192.168.137.130:45819) with 1 cores
+[INFO  2018-03-06 10:13:43][dispatcher-event-loop-2] Logging$class:58 Granted executor ID app-20180305181343-0000/1 on hostPort 192.168.137.130:45819 with 1 cores, 1024.0 MB RAM
+[INFO  2018-03-06 10:13:43][main] Logging$class:58 SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[INFO  2018-03-06 10:13:44][dispatcher-event-loop-3] Logging$class:58 Executor updated: app-20180305181343-0000/0 is now RUNNING
+[INFO  2018-03-06 10:13:44][dispatcher-event-loop-1] Logging$class:58 Executor updated: app-20180305181343-0000/1 is now RUNNING
+[INFO  2018-03-06 10:13:45][main] Logging$class:58 Block broadcast_0 stored as values in memory (estimated size 128.0 KB, free 128.0 KB)
+[INFO  2018-03-06 10:13:45][main] Logging$class:58 Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.1 KB, free 142.1 KB)
+[INFO  2018-03-06 10:13:45][dispatcher-event-loop-0] Logging$class:58 Added broadcast_0_piece0 in memory on 192.168.68.44:55325 (size: 14.1 KB, free: 2.4 GB)
+[INFO  2018-03-06 10:13:45][main] Logging$class:58 Created broadcast 0 from textFile at SparkWordCountOps.scala:13
+[INFO  2018-03-06 10:13:49][Thread-2] Logging$class:58 Invoking stop() from shutdown hook
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/api,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/static,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+[INFO  2018-03-06 10:13:49][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs,null}
+[WARN  2018-03-06 10:13:49][Thread-2] QueuedThreadPool:145 8 threads could not be stopped
+[INFO  2018-03-06 10:13:49][Thread-2] Logging$class:58 Stopped Spark web UI at http://192.168.68.44:4040
+[INFO  2018-03-06 10:13:49][Thread-2] Logging$class:58 Shutting down all executors
+[INFO  2018-03-06 10:13:49][dispatcher-event-loop-1] Logging$class:58 Asking each executor to shut down
+[INFO  2018-03-06 10:13:50][dispatcher-event-loop-3] Logging$class:58 MapOutputTrackerMasterEndpoint stopped!
+[INFO  2018-03-06 10:13:50][Thread-2] Logging$class:58 MemoryStore cleared
+[INFO  2018-03-06 10:13:50][Thread-2] Logging$class:58 BlockManager stopped
+[INFO  2018-03-06 10:13:50][Thread-2] Logging$class:58 BlockManagerMaster stopped
+[INFO  2018-03-06 10:13:50][dispatcher-event-loop-3] Logging$class:58 OutputCommitCoordinator stopped!
+[INFO  2018-03-06 10:13:50][Thread-2] Logging$class:58 Successfully stopped SparkContext
+[INFO  2018-03-06 10:13:50][Thread-2] Logging$class:58 Shutdown hook called
+[INFO  2018-03-06 10:13:50][Thread-2] Logging$class:58 Deleting directory C:\Users\GMW\AppData\Local\Temp\spark-df12b9ab-aeff-46d6-96ce-b60eb76f32ab
+[INFO  2018-03-06 16:22:04][main] Logging$class:58 Running Spark version 1.6.2
+[WARN  2018-03-06 16:22:07][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-03-06 16:22:08][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2198)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at com.bigdata.RDD.SparkParallismOps$.main(SparkParallismOps.scala:11)
+	at com.bigdata.RDD.SparkParallismOps.main(SparkParallismOps.scala)
+[ERROR 2018-03-06 16:22:08][main] Logging$class:95 Error initializing SparkContext.
+org.apache.spark.SparkException: A master URL must be set in your configuration
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:401)
+	at com.bigdata.RDD.SparkParallismOps$.main(SparkParallismOps.scala:11)
+	at com.bigdata.RDD.SparkParallismOps.main(SparkParallismOps.scala)
+[INFO  2018-03-06 16:22:08][main] Logging$class:58 Successfully stopped SparkContext
+[INFO  2018-03-06 16:22:59][main] Logging$class:58 Running Spark version 1.6.2
+[WARN  2018-03-06 16:23:00][main] NativeCodeLoader:62 Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ERROR 2018-03-06 16:23:01][main] Shell:373 Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2198)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2198)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at com.bigdata.RDD.SparkParallismOps$.main(SparkParallismOps.scala:11)
+	at com.bigdata.RDD.SparkParallismOps.main(SparkParallismOps.scala)
+[INFO  2018-03-06 16:23:01][main] Logging$class:58 Changing view acls to: GMW
+[INFO  2018-03-06 16:23:01][main] Logging$class:58 Changing modify acls to: GMW
+[INFO  2018-03-06 16:23:01][main] Logging$class:58 SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(GMW); users with modify permissions: Set(GMW)
+[INFO  2018-03-06 16:23:03][main] Logging$class:58 Successfully started service 'sparkDriver' on port 56231.
+[INFO  2018-03-06 16:23:03][sparkDriverActorSystem-akka.actor.default-dispatcher-4] Slf4jLogger$$anonfun$receive$1:80 Slf4jLogger started
+[INFO  2018-03-06 16:23:04][sparkDriverActorSystem-akka.actor.default-dispatcher-4] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Starting remoting
+[INFO  2018-03-06 16:23:04][sparkDriverActorSystem-akka.actor.default-dispatcher-3] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.68.44:56244]
+[INFO  2018-03-06 16:23:04][main] Logging$class:58 Successfully started service 'sparkDriverActorSystem' on port 56244.
+[INFO  2018-03-06 16:23:04][main] Logging$class:58 Registering MapOutputTracker
+[INFO  2018-03-06 16:23:04][main] Logging$class:58 Registering BlockManagerMaster
+[INFO  2018-03-06 16:23:04][main] Logging$class:58 Created local directory at C:\Users\GMW\AppData\Local\Temp\blockmgr-2ea7b040-1914-4b00-b106-54669c306300
+[INFO  2018-03-06 16:23:04][main] Logging$class:58 MemoryStore started with capacity 2.4 GB
+[INFO  2018-03-06 16:23:04][main] Logging$class:58 Registering OutputCommitCoordinator
+[INFO  2018-03-06 16:23:05][main] Server:272 jetty-8.y.z-SNAPSHOT
+[INFO  2018-03-06 16:23:05][main] AbstractConnector:338 Started SelectChannelConnector@0.0.0.0:4040
+[INFO  2018-03-06 16:23:05][main] Logging$class:58 Successfully started service 'SparkUI' on port 4040.
+[INFO  2018-03-06 16:23:05][main] Logging$class:58 Started SparkUI at http://192.168.68.44:4040
+[INFO  2018-03-06 16:23:05][main] Logging$class:58 Starting executor ID driver on host localhost
+[INFO  2018-03-06 16:23:05][main] Logging$class:58 Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56252.
+[INFO  2018-03-06 16:23:05][main] Logging$class:58 Server created on 56252
+[INFO  2018-03-06 16:23:05][main] Logging$class:58 Trying to register BlockManager
+[INFO  2018-03-06 16:23:05][dispatcher-event-loop-3] Logging$class:58 Registering block manager localhost:56252 with 2.4 GB RAM, BlockManagerId(driver, localhost, 56252)
+[INFO  2018-03-06 16:23:05][main] Logging$class:58 Registered BlockManager
+[INFO  2018-03-06 16:23:06][main] Logging$class:58 Starting job: foreach at SparkParallismOps.scala:15
+[INFO  2018-03-06 16:23:06][dag-scheduler-event-loop] Logging$class:58 Got job 0 (foreach at SparkParallismOps.scala:15) with 1 output partitions
+[INFO  2018-03-06 16:23:06][dag-scheduler-event-loop] Logging$class:58 Final stage: ResultStage 0 (foreach at SparkParallismOps.scala:15)
+[INFO  2018-03-06 16:23:06][dag-scheduler-event-loop] Logging$class:58 Parents of final stage: List()
+[INFO  2018-03-06 16:23:06][dag-scheduler-event-loop] Logging$class:58 Missing parents: List()
+[INFO  2018-03-06 16:23:06][dag-scheduler-event-loop] Logging$class:58 Submitting ResultStage 0 (ParallelCollectionRDD[0] at parallelize at SparkParallismOps.scala:14), which has no missing parents
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Block broadcast_0 stored as values in memory (estimated size 1200.0 B, free 1200.0 B)
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Block broadcast_0_piece0 stored as bytes in memory (estimated size 870.0 B, free 2.0 KB)
+[INFO  2018-03-06 16:23:07][dispatcher-event-loop-2] Logging$class:58 Added broadcast_0_piece0 in memory on localhost:56252 (size: 870.0 B, free: 2.4 GB)
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Submitting 1 missing tasks from ResultStage 0 (ParallelCollectionRDD[0] at parallelize at SparkParallismOps.scala:14)
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Adding task set 0.0 with 1 tasks
+[INFO  2018-03-06 16:23:07][dispatcher-event-loop-0] Logging$class:58 Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2054 bytes)
+[INFO  2018-03-06 16:23:07][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 0.0 (TID 0)
+[INFO  2018-03-06 16:23:07][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0). 915 bytes result sent to driver
+[INFO  2018-03-06 16:23:07][task-result-getter-0] Logging$class:58 Finished task 0.0 in stage 0.0 (TID 0) in 81 ms on localhost (1/1)
+[INFO  2018-03-06 16:23:07][task-result-getter-0] Logging$class:58 Removed TaskSet 0.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 ResultStage 0 (foreach at SparkParallismOps.scala:15) finished in 0.106 s
+[INFO  2018-03-06 16:23:07][main] Logging$class:58 Job 0 finished: foreach at SparkParallismOps.scala:15, took 0.722461 s
+[INFO  2018-03-06 16:23:07][main] Logging$class:58 Starting job: foreach at SparkParallismOps.scala:17
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Got job 1 (foreach at SparkParallismOps.scala:17) with 1 output partitions
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Final stage: ResultStage 1 (foreach at SparkParallismOps.scala:17)
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Parents of final stage: List()
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Missing parents: List()
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Submitting ResultStage 1 (MapPartitionsRDD[1] at map at SparkParallismOps.scala:17), which has no missing parents
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1 stored as values in memory (estimated size 1904.0 B, free 3.9 KB)
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Block broadcast_1_piece0 stored as bytes in memory (estimated size 1228.0 B, free 5.1 KB)
+[INFO  2018-03-06 16:23:07][dispatcher-event-loop-2] Logging$class:58 Added broadcast_1_piece0 in memory on localhost:56252 (size: 1228.0 B, free: 2.4 GB)
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[1] at map at SparkParallismOps.scala:17)
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 Adding task set 1.0 with 1 tasks
+[INFO  2018-03-06 16:23:07][dispatcher-event-loop-0] Logging$class:58 Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,PROCESS_LOCAL, 2054 bytes)
+[INFO  2018-03-06 16:23:07][Executor task launch worker-0] Logging$class:58 Running task 0.0 in stage 1.0 (TID 1)
+[INFO  2018-03-06 16:23:07][Executor task launch worker-0] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 1). 915 bytes result sent to driver
+[INFO  2018-03-06 16:23:07][task-result-getter-1] Logging$class:58 Finished task 0.0 in stage 1.0 (TID 1) in 11 ms on localhost (1/1)
+[INFO  2018-03-06 16:23:07][dag-scheduler-event-loop] Logging$class:58 ResultStage 1 (foreach at SparkParallismOps.scala:17) finished in 0.011 s
+[INFO  2018-03-06 16:23:07][task-result-getter-1] Logging$class:58 Removed TaskSet 1.0, whose tasks have all completed, from pool 
+[INFO  2018-03-06 16:23:07][main] Logging$class:58 Job 1 finished: foreach at SparkParallismOps.scala:17, took 0.032926 s
+[INFO  2018-03-06 16:23:07][Thread-2] Logging$class:58 Invoking stop() from shutdown hook
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/api,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/static,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/executors,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/environment,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/storage,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/stages,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+[INFO  2018-03-06 16:23:07][Thread-2] ContextHandler:843 stopped o.s.j.s.ServletContextHandler{/jobs,null}
+[INFO  2018-03-06 16:23:07][Thread-2] Logging$class:58 Stopped Spark web UI at http://192.168.68.44:4040
+[INFO  2018-03-06 16:23:07][dispatcher-event-loop-3] Logging$class:58 MapOutputTrackerMasterEndpoint stopped!
+[INFO  2018-03-06 16:23:07][Thread-2] Logging$class:58 MemoryStore cleared
+[INFO  2018-03-06 16:23:07][Thread-2] Logging$class:58 BlockManager stopped
+[INFO  2018-03-06 16:23:07][Thread-2] Logging$class:58 BlockManagerMaster stopped
+[INFO  2018-03-06 16:23:07][dispatcher-event-loop-3] Logging$class:58 OutputCommitCoordinator stopped!
+[INFO  2018-03-06 16:23:07][Thread-2] Logging$class:58 Successfully stopped SparkContext
+[INFO  2018-03-06 16:23:07][Thread-2] Logging$class:58 Shutdown hook called
+[INFO  2018-03-06 16:23:07][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Shutting down remote daemon.
+[INFO  2018-03-06 16:23:07][Thread-2] Logging$class:58 Deleting directory C:\Users\GMW\AppData\Local\Temp\spark-9b3c20c2-0c75-4a94-9afc-b241ab814f8b
+[INFO  2018-03-06 16:23:07][sparkDriverActorSystem-akka.actor.default-dispatcher-2] Slf4jLogger$$anonfun$receive$1$$anonfun$applyOrElse$3:74 Remote daemon shut down; proceeding with flushing remote transports.
