@@ -1,4 +1,4 @@
-package com.bigdata.hadoop.java.IO;
+package com.bigdata.hadoop.java.Util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
