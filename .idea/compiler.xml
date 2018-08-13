@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="elasticsearch-study" />
+        <module name="java-web" />
         <module name="strom-study" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="bigdata-study" target="1.8" />
       <module name="elasticsearch-study" target="1.8" />
+      <module name="java-web" target="1.8" />
       <module name="strom-study" target="1.8" />
     </bytecodeTargetLevel>
   </component>

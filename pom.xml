@@ -8,6 +8,7 @@
     <modules>
         <module>strom-study</module>
         <module>elasticsearch-study</module>
+        <module>java-web</module>
     </modules>
     <packaging>pom</packaging>
 
