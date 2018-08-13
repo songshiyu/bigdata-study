@@ -9,8 +9,8 @@ import java.io.*;
  * Created by songshiyu on 2018/8/10.
  *
  */
-public class IOTest {
-    private static Logger log = LoggerFactory.getLogger(IOTest.class);
+public class IOUtil {
+    private static Logger log = LoggerFactory.getLogger(IOUtil.class);
 
     public static void main(String[] args) {
         String fileName = "D:\\test.txt";
