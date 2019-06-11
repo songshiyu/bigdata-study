@@ -15,6 +15,16 @@ public class TestBSCZTree {
         for (int i =0; i< arr.length; i++){
             tree.insert(arr[i]);
         }
-        System.out.println(tree);
+
+        tree.print();
+
+        System.out.println("-----------插入前-----------------");
+
+        tree.insert(8);
+
+        System.out.println("-----------插入后-----------------");
+        tree.print();
+
+        tree.remove(1);
     }
 }
