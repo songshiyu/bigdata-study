@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/bigdata-study.iml" filepath="$PROJECT_DIR$/bigdata-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/elasticsearch-study/elasticsearch-study.iml" filepath="$PROJECT_DIR$/elasticsearch-study/elasticsearch-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-web/java-web.iml" filepath="$PROJECT_DIR$/java-web/java-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sparkStreaming-study/sparkStreaming-study.iml" filepath="$PROJECT_DIR$/sparkStreaming-study/sparkStreaming-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/strom-study/strom-study.iml" filepath="$PROJECT_DIR$/strom-study/strom-study.iml" />
     </modules>
   </component>
